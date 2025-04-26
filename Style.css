@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0f172a;
+  color: white;
+  overflow-x: hidden;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #00ffff;
+  font-weight: bold;
+}
+
+.hero {
+  height: 100vh;
+  background: linear-gradient(to bottom right, #0f172a, #000000);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 20px;
+  animation: pulse 3s infinite;
+}
+
+.profile-pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  color: #cbd5e1;
+}
+
+.about, .dream, .contact {
+  padding: 60px 30px;
+  text-align: center;
+  background: #000000;
+}
+
+.about p, .dream ul, .contact p {
+  margin-top: 20px;
+  line-height: 1.6;
+}
+
+.parallax {
+  height: 300px;
+  background: url('https://via.placeholder.com/1200x600/0f172a/ffffff?text=Jogging+Futsal') center/cover no-repeat fixed;
+}
+
+.dream ul {
+  list-style: none;
+}
+
+.dream ul li {
+  margin: 10px 0;
+  font-size: 1.2rem;
+}
+
+.book-animation {
+  font-size: 3rem;
+  margin-top: 30px;
+  animation: float 3s infinite ease-in-out;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
+}
+
+.contact {
+  background: #0f172a;
+}
+
+.contact a {
+  color: #00ffff;
+  text-decoration: none;
+}
+
+.ball {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  width: 50px;
+  height: 50px;
+  background: radial-gradient(circle, #00ffff 0%, #0f172a 70%);
+  border-radius: 50%;
+  animation: moveBall 10s linear infinite;
+  opacity: 0.7;
+}
+
+@keyframes moveBall {
+  0% { transform: translate(0, 0); }
+  50% { transform: translate(80vw, -50vh); }
+  100% { transform: translate(0, 0); }
+}
